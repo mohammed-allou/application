@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="cv.css" />
+  <link rel="stylesheet" href="test.css" />
   <title>Premiers tests du CSS</title>
 </head>
 
@@ -61,28 +61,28 @@
 
 <p>La marge inférieure de ce paragraphe fusionne...</p>
 <p>... avec la marge supérieure de celui-ci</p>
-<a href="intro_sc_eco.pdf" title="Fichier PDF 1337Ko">Plan d’accès</a>
+<a href="intro_sc_eco.pdf" title="Fichier PDF 623Ko">Plan d’accès</a>
 <div id="parag">
   <h1>columns</h1>
   <p>
     CSS 3 offre la possibilité de présenter un texte sur plusieurs colonnes, à l’instar des journaux
-    papier, via column et ses propriétés dérivées.
+    papier, via <stong>column</stong> et ses propriétés dérivées.
     Ces différentes propriétés peuvent être scindées en trois parties fonctionnelles :
-    • Le premier groupe de propriétés définit le nombre et la taille des colonnes :
-    – columns (raccourci de column-count et column-width) : nombre de colonnes et éventuellement largeur de chaque colonne ;
-    – column-min-width : largeur minimale de chaque colonne ;
-    – column-width-policy  : le mode d’affichage des colonnes (valeurs "flexible", "strict" ou
-    "inherit").
-    • Le second groupe gère ce qu’il y a entre les colonnes :
-    – column-gap : distance entre chaque colonne ;
-    – <strong> column-rule </strong>(raccourci de column-rule-color, column-rule-style et column-rule-width) :
-    couleur, style et largeur de la séparation entre colonnes.
-  • Enfin, une propriété column-span permet à un élément de s’étendre sur plusieurs colonnes.</p>
-  <p> La propriété multi-colonne CSS column-rule est un raccourci qui permet de spécifier l'épaisseur, la couleur et le style de la ligne entre chaque colonne de l'élément. Exemple d'écriture CSS de column-rule column-rule : 3px ridge green; La propriété de feuille de style column-rule CSS peut prendre les valeurs de :<mark>- column-rule-width</mark>, spécifie l'épaisseur de la ligne entre chaque colonne de l'élément, - column-rule-color, spécifie la couleur de la ligne entre chaque colonne de l'élément, - column-rule-style, spécifie le style de la ligne entre chaque colonne de l'élément.La propriété column-rule CSS est applicable sur l'ensemble des balises de type block, inline-block ou table-cell. Les balises filles HTML ou XHTML n'héritent pas de la propriété columns CSS.La propriété CSS column-rule n'est reconnue que par Internet Explorer 10+ et Opera 11.1+ (06-2015).
+    • Le premier groupe de propriétés définit le nombre et la taille des colonnes :<br/>
+    – <em>columns</em> (raccourci de <em>column-count</em> et<em> column-width</em>) : nombre de colonnes et éventuellement largeur de chaque colonne ;<br/>
+    – <em>column-min-width</em> : largeur minimale de chaque colonne ;<br/>
+    – <em>column-width-policy</em>  : le mode d’affichage des colonnes (valeurs "flexible", "strict" ou
+    "inherit").<br>
+    • Le second groupe gère ce qu’il y a entre les colonnes :<br>
+    – <em>column-gap </em>: distance entre chaque colonne ;<br>
+    – <em> column-rule </em>(raccourci de<em> column-rule-color, column-rule-style</em> et <em>column-rule-width</em>) :<br>
+    couleur, style et largeur de la séparation entre colonnes.<br>
+  • Enfin, une propriété <em>column-span</em> permet à un élément de s’étendre sur plusieurs colonnes.</p>
+  <p> La propriété multi-colonne CSS <em>column-rule</em> est un raccourci qui permet de spécifier l'épaisseur, la couleur et le style de la ligne entre chaque colonne de l'élément. Exemple d'écriture CSS de column-rule<em>column-rule : 3px ridge green;</em> La propriété de feuille de style column-rule CSS peut prendre les valeurs de :<mark>- column-rule-width</mark>, spécifie l'épaisseur de la ligne entre chaque colonne de l'élément, <em>- column-rule-color</em>, spécifie la couleur de la ligne entre chaque colonne de l'élément, <em>- column-rule-style</em>, spécifie le style de la ligne entre chaque colonne de l'élément.La propriété <em>column-rule</em> CSS est applicable sur l'ensemble des balises de type block, inline-block ou table-cell. Les balises filles HTML ou XHTML n'héritent pas de la propriété columns CSS.La propriété CSS column-rule n'est reconnue que par Internet Explorer 10+ et Opera 11.1+ (06-2015).<br/>
     Obtenir un contenu sur plusieurs colonnes est devenu un exercice enfantin depuis l’avènement de
-CSS 3. Il suffit en effet de manipuler les propriétés column-count (nombre de colonnes), columngap (espace entre colonnes), column-rule (trait de séparation)… et de n’oublier aucun préfixe pour
-les différents moteurs de rendu, comme le montre l’exemple suivant :{ column-count: 4;
- column-gap: 10px; }
+CSS 3. Il suffit en effet de manipuler les propriétés <em>column-count</em> (nombre de colonnes),<em> columngap</em> (espace entre colonnes), <em>column-rule</em> (trait de séparation)… et de n’oublier aucun préfixe pour
+les différents moteurs de rendu, comme le montre l’exemple suivant :{<em> column-count: 4;
+ column-gap: 10px; </em>}
   </p>
 }
 </div>
