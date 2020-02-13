@@ -1,0 +1,64 @@
+
+@font-face{
+	font-family: "YellowMagician";
+	src:url("font/YellowMagician.ttf");
+}
+table
+{
+	border-collapse: collapse;
+}
+th
+
+{
+	font-family: "YellowMagician";
+	border: solid 1px blue;
+	width: 50px;
+	padding: 10px;
+
+}
+
+tr td
+{
+	font-family: "YellowMagician";
+	border: solid 2px black;
+	width: 5Opx;
+	text-align: center;
+	padding: 20px;
+
+}
+
+caption
+{
+	box-shadow: 3px 3px 1px;
+	font-weight: bold;
+	padding: 10px;
+	caption-side: bottom;
+}
+
+
+p {
+
+	margin-bottom: 20px;
+}
+p {
+	margin-top: 30px; /* une marge haute sur le second paragraphe */
+}
+a[href$="pdf"]:after {
+	content: " (" attr(title) ")";
+	font-style: italic;
+}
+#parag
+{
+	column-count: 3;
+	column-gap: 10px;
+	column-rule: 1px solid #ccc;
+	break-inside: avoid; /* pas de saut de colonne au sein des paragraphes */
+word-wrap: break-word; /* césure des mots longs */
+
+}
+h1
+{
+	float: left;
+	margin: 5%;
+	padding: 5%;
+}
