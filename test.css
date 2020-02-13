@@ -2,6 +2,11 @@
 @font-face{
 	font-family: "YellowMagician";
 	src:url("font/YellowMagician.ttf");
+	font-family: "sprat";
+	src:url("Sprat_Variable.ttf"),
+	url("Sprat-CondensedBold.otf");
+	font-weight: normal;
+	font-style: bold;
 }
 table
 {
@@ -54,11 +59,21 @@ a[href$="pdf"]:after {
 	column-rule: 1px solid #ccc;
 	break-inside: avoid; /* pas de saut de colonne au sein des paragraphes */
 word-wrap: break-word; /* césure des mots longs */
-
+font-smoothing:normal;
+text-align: justify;
 }
 h1
 {
 	float: left;
 	margin: 5%;
-	padding: 5%;
+	padding: 2%;
+	font-family: "sprat";
+	border: solid;
+	border-color: maroon;
+	border-radius: 15px 0 10px 0;
+}
+em
+{
+	font-weight: bold;
+	color: blue;
 }
