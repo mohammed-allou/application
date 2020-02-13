@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="cv.css" />
+  <title>Premiers tests du CSS</title>
+</head>
+
+<table>
+ <caption>Passagers du vol 377</caption>
+
+ <thead> <!-- En-tête du tableau -->
+   <tr>
+     <th>Nom</th>
+     <th>Âge</th>
+     <th>Pays</th>
+   </tr>
+ </thead>
+
+ <tfoot> <!-- Pied de tableau -->
+   <tr>
+     <th>Nom</th>
+     <th>Âge</th>
+     <th>Pays</th>
+   </tr>
+ </tfoot>
+
+ <tbody> <!-- Corps du tableau -->
+   <tr>
+     <td>Carmen</td>
+     <td>33 ans</td>
+     <td>Espagne</td>
+   </tr>
+   <tr>
+     <td>Michelle</td>
+     <td>26 ans</td>
+     <td>États-Unis</td>
+   </tr>
+   <tr>
+     <td>François</td>
+     <td>43 ans</td>
+     <td rowspan="2"> France</td>
+   </tr>
+   <tr>
+     <td>Martine</td>
+     <td>34 ans</td>
+   </tr>
+   <tr>
+     <td>Jonathan</td>
+     <td>13 ans</td>
+     <td>Australie</td>
+   </tr>
+   <tr>
+     <td>Xu</td>
+     <td>19 ans</td>
+     <td>Chine</td>
+   </tr>
+ </tbody>
+</table>
+
+<p>La marge inférieure de ce paragraphe fusionne...</p>
+<p>... avec la marge supérieure de celui-ci</p>
+<a href="intro_sc_eco.pdf" title="Fichier PDF 1337Ko">Plan d’accès</a>
+<div id="parag">
+  <h1>columns</h1>
+  <p>
+    CSS 3 offre la possibilité de présenter un texte sur plusieurs colonnes, à l’instar des journaux
+    papier, via column et ses propriétés dérivées.
+    Ces différentes propriétés peuvent être scindées en trois parties fonctionnelles :
+    • Le premier groupe de propriétés définit le nombre et la taille des colonnes :
+    – columns (raccourci de column-count et column-width) : nombre de colonnes et éventuellement largeur de chaque colonne ;
+    – column-min-width : largeur minimale de chaque colonne ;
+    – column-width-policy  : le mode d’affichage des colonnes (valeurs "flexible", "strict" ou
+    "inherit").
+    • Le second groupe gère ce qu’il y a entre les colonnes :
+    – column-gap : distance entre chaque colonne ;
+    – <strong> column-rule </strong>(raccourci de column-rule-color, column-rule-style et column-rule-width) :
+    couleur, style et largeur de la séparation entre colonnes.
+  • Enfin, une propriété column-span permet à un élément de s’étendre sur plusieurs colonnes.</p>
+  <p> La propriété multi-colonne CSS column-rule est un raccourci qui permet de spécifier l'épaisseur, la couleur et le style de la ligne entre chaque colonne de l'élément. Exemple d'écriture CSS de column-rule column-rule : 3px ridge green; La propriété de feuille de style column-rule CSS peut prendre les valeurs de :<mark>- column-rule-width</mark>, spécifie l'épaisseur de la ligne entre chaque colonne de l'élément, - column-rule-color, spécifie la couleur de la ligne entre chaque colonne de l'élément, - column-rule-style, spécifie le style de la ligne entre chaque colonne de l'élément.La propriété column-rule CSS est applicable sur l'ensemble des balises de type block, inline-block ou table-cell. Les balises filles HTML ou XHTML n'héritent pas de la propriété columns CSS.La propriété CSS column-rule n'est reconnue que par Internet Explorer 10+ et Opera 11.1+ (06-2015).
+    Obtenir un contenu sur plusieurs colonnes est devenu un exercice enfantin depuis l’avènement de
+CSS 3. Il suffit en effet de manipuler les propriétés column-count (nombre de colonnes), columngap (espace entre colonnes), column-rule (trait de séparation)… et de n’oublier aucun préfixe pour
+les différents moteurs de rendu, comme le montre l’exemple suivant :{ column-count: 4;
+ column-gap: 10px; }
+  </p>
+}
+</div>
+
+</html>
