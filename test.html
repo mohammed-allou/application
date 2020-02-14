@@ -4,63 +4,104 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="test.css" />
-  <title>Premiers tests du CSS</title>
+  <title>tests du CSS</title>
 </head>
 
 <table>
- <caption>Passagers du vol 377</caption>
+ <caption>Le rendu par défaut des éléments</caption>
 
  <thead> <!-- En-tête du tableau -->
    <tr>
-     <th>Nom</th>
-     <th>Âge</th>
-     <th>Pays</th>
+     <th>Display (défaut</th>
+     <th>Exemples</th>
+     <th>Spécificités</th>
    </tr>
  </thead>
 
  <tfoot> <!-- Pied de tableau -->
    <tr>
-     <th>Nom</th>
-     <th>Âge</th>
-     <th>Pays</th>
+     <th>Display</th>
+     <th>Exemple</th>
+     <th>Spécificités</th>
    </tr>
  </tfoot>
 
  <tbody> <!-- Corps du tableau -->
-   <tr>
-     <td>Carmen</td>
-     <td>33 ans</td>
-     <td>Espagne</td>
-   </tr>
-   <tr>
-     <td>Michelle</td>
-     <td>26 ans</td>
-     <td>États-Unis</td>
-   </tr>
-   <tr>
-     <td>François</td>
-     <td>43 ans</td>
-     <td rowspan="2"> France</td>
-   </tr>
-   <tr>
-     <td>Martine</td>
-     <td>34 ans</td>
-   </tr>
-   <tr>
-     <td>Jonathan</td>
-     <td>13 ans</td>
-     <td>Australie</td>
-   </tr>
-   <tr>
-     <td>Xu</td>
-     <td>19 ans</td>
-     <td>Chine</td>
-   </tr>
- </tbody>
-</table>
+  <tr>
+    <td>block</td>
+    <td>"div, p,ul, h1"</td>
+    <td>Les éléments de rendu CSS display: block se placent toujours l’un en
+      dessous de l’autre par défaut (comme un retour chariot). Par exemple :
+      une suite de paragraphes ("p").
+        Par ailleurs, un élément bloc occupe automatiquement, par défaut,
+        toute la largeur disponible dans son conteneur et peut être dimensionné
+        à l’aide des propriétés telles que width, height, min-width, ou
+      min-height…</td>
+    </tr>
+    <tr>
+      <td>inline</td>
+      <td>"a, em,span,strong"</td>
+      <td>Les éléments de rendu display: inline se placent toujours l’un à côté
+        de l’autre afin de rester dans le texte. Par défaut, il n’est pas prévu qu’ils
+        puissent se positionner sur la page (même si cela est possible), ni de leur
+        donner des dimensions (hauteur, largeur, profondeur) : leur taille va être
+        déterminée par le texte ou les éléments qu’ils contiennent.
+        Certaines propriétés de marges peuvent être appliquées aux éléments,
+      comme les marges latérales (margin-left et margin-right).</td>
+    </tr>
+    <tr>
+      <td>none</td>
+      <td>"head"</td>
+      <td>L’élément est complètement retiré du flux, il n’est pas restitué par les
+      agents utilisateurs.</td>
+    </tr>
+    <tr>
+     <td>list-item</td>
+     <td>"li"</td>
+     <td>Les éléments de rendu display: list-item ont un rendu de type
+      block mais peuvent bénéficier des propriétés CSS liées aux puces
+    (list-style…), par exemple "li".</td>
+  </tr>
+  <tr>
+   <td>inline-block</td>
+   <td>"input,select"</td>
+   <td>Les éléments de rendu display: inline-block conservent les mêmes
+    caractéristiques que les inline, mais peuvent être dimensionnés, par
+  exemple l’élément "input".</td>
+</tr>
+<tr>
+ <td>table</td>
+ <td>"table"</td>
+ <td> Les éléments de rendu display: table sont similaires aux éléments de
+  type block mais n’occupent par défaut que la largeur de leur contenu,
+par exemple "table"</td>
+</tr>
+<tr>
+ <td>table-cell</td>
+ <td>"td", "th"</td>
+ <td>Les éléments de rendu display: table-cell ont un rendu similaire aux
+  éléments inline-block dans la mesure où ils s’affichent les uns à côté
+  des autres et peuvent être dimensionnés.
+  Leurs particularités supplémentaires est d’accepter la propriété
+  vertical-align pour aligner leur contenu verticalement, d’avoir
+  des hauteurs identiques entre éléments frères et de répartir
+automatiquement leur largeur au sein de leur parent.</td>
+</tr>
+<tr>
+ <td>table-row</td>
+ <td>"tr"</td>
+ <td>Les éléments de rendu display: table-row ont un rendu similaire aux
+  éléments block dans la mesure où ils s’affichent les uns sous les autres.
+  Leur particularité supplémentaire est de répartir automatiquement leur
+hauteur au sein de leur parent.</td>
+</tr>
 
-<p>La marge inférieure de ce paragraphe fusionne...</p>
-<p>... avec la marge supérieure de celui-ci</p>
+</tbody>
+</table>
+<div id="img">
+  <p>La marge inférieure de ce paragraphe fusionne...</p>
+  <p>... avec la marge supérieure de celui-ci</p>
+</div>
 <a href="intro_sc_eco.pdf" title="Fichier PDF 623Ko">Plan d’accès</a>
 <div id="parag">
   <h1>columns</h1>
@@ -77,14 +118,14 @@
     – <em>column-gap </em>: distance entre chaque colonne ;<br>
     – <em> column-rule </em>(raccourci de<em> column-rule-color, column-rule-style</em> et <em>column-rule-width</em>) :<br>
     couleur, style et largeur de la séparation entre colonnes.<br>
-  • Enfin, une propriété <em>column-span</em> permet à un élément de s’étendre sur plusieurs colonnes.</p>
-  <p> La propriété multi-colonne CSS <em>column-rule</em> est un raccourci qui permet de spécifier l'épaisseur, la couleur et le style de la ligne entre chaque colonne de l'élément. Exemple d'écriture CSS de column-rule<em>column-rule : 3px ridge green;</em> La propriété de feuille de style column-rule CSS peut prendre les valeurs de :<mark>- column-rule-width</mark>, spécifie l'épaisseur de la ligne entre chaque colonne de l'élément, <em>- column-rule-color</em>, spécifie la couleur de la ligne entre chaque colonne de l'élément, <em>- column-rule-style</em>, spécifie le style de la ligne entre chaque colonne de l'élément.La propriété <em>column-rule</em> CSS est applicable sur l'ensemble des balises de type block, inline-block ou table-cell. Les balises filles HTML ou XHTML n'héritent pas de la propriété columns CSS.La propriété CSS column-rule n'est reconnue que par Internet Explorer 10+ et Opera 11.1+ (06-2015).<br/>
-    Obtenir un contenu sur plusieurs colonnes est devenu un exercice enfantin depuis l’avènement de
-CSS 3. Il suffit en effet de manipuler les propriétés <em>column-count</em> (nombre de colonnes),<em> columngap</em> (espace entre colonnes), <em>column-rule</em> (trait de séparation)… et de n’oublier aucun préfixe pour
-les différents moteurs de rendu, comme le montre l’exemple suivant :{<em> column-count: 4;
- column-gap: 10px; </em>}
-  </p>
-}
+    • Enfin, une propriété <em>column-span</em> permet à un élément de s’étendre sur plusieurs colonnes.</p>
+    <p> La propriété multi-colonne CSS <em>column-rule</em> est un raccourci qui permet de spécifier l'épaisseur, la couleur et le style de la ligne entre chaque colonne de l'élément. Exemple d'écriture CSS de column-rule<em>column-rule : 3px ridge green;</em> La propriété de feuille de style column-rule CSS peut prendre les valeurs de :<mark>- column-rule-width</mark>, spécifie l'épaisseur de la ligne entre chaque colonne de l'élément, <em>- column-rule-color</em>, spécifie la couleur de la ligne entre chaque colonne de l'élément, <em>- column-rule-style</em>, spécifie le style de la ligne entre chaque colonne de l'élément.La propriété <em>column-rule</em> CSS est applicable sur l'ensemble des balises de type block, inline-block ou table-cell. Les balises filles HTML ou XHTML n'héritent pas de la propriété columns CSS.La propriété CSS column-rule n'est reconnue que par Internet Explorer 10+ et Opera 11.1+ (06-2015).<br/>
+      Obtenir un contenu sur plusieurs colonnes est devenu un exercice enfantin depuis l’avènement de
+      CSS 3. Il suffit en effet de manipuler les propriétés <em>column-count</em> (nombre de colonnes),<em> columngap</em> (espace entre colonnes), <em>column-rule</em> (trait de séparation)… et de n’oublier aucun préfixe pour
+      les différents moteurs de rendu, comme le montre l’exemple suivant :{<em> column-count: 4;
+      column-gap: 10px; </em>}
+    </p>
+  }
 </div>
 
 </html>
