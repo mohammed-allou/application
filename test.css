@@ -1,35 +1,27 @@
 
 @font-face{
-	font-family: "YellowMagician";
-	src:url("font/YellowMagician.ttf");
-	font-family: "sprat";
-	src:url("Sprat_Variable.ttf"),
-	url("Sprat-CondensedBold.otf");
-	font-weight: normal;
-	font-style: bold;
+	
+	font-family: 'sprat';
+	src:url('Sprat_Variable.ttf'),
+		url('Sprat-CondensedBold.otf');
+	font-family: 'whitrabt';
+	src:url('whitrabt.ttf');
+	 font-weight: normal;
+    font-style: normal;
 }
 table
 {
 	border-collapse: collapse;
-}
-th
-
-{
-	font-family: "YellowMagician";
-	border: solid 1px blue;
-	width: 50px;
-	padding: 10px;
-
-}
-
-tr td
-{
-	font-family: "YellowMagician";
+	font-family: whitrabt,serif;
 	border: solid 2px black;
-	width: 5Opx;
+	width: auto;
+	margin: auto;
 	text-align: center;
-	padding: 20px;
-
+	padding: 10px;
+}
+td,tr,th
+{
+	border: solid 2px black;
 }
 
 caption
@@ -38,17 +30,18 @@ caption
 	font-weight: bold;
 	padding: 10px;
 	caption-side: bottom;
+	text-shadow: 2px 2px 4px #999;
 }
 
 
 p {
-
+	font-family: whitrabt,serif;
 	margin-bottom: 20px;
-}
-p {
+
 	margin-top: 30px; /* une marge haute sur le second paragraphe */
 }
-a[href$="pdf"]:after {
+a[href$="pdf"]:after 
+{
 	content: " (" attr(title) ")";
 	font-style: italic;
 }
@@ -56,24 +49,37 @@ a[href$="pdf"]:after {
 {
 	column-count: 3;
 	column-gap: 10px;
-	column-rule: 1px solid #ccc;
-	break-inside: avoid; /* pas de saut de colonne au sein des paragraphes */
-word-wrap: break-word; /* césure des mots longs */
-font-smoothing:normal;
-text-align: justify;
+	column-rule: 1px solid black;
+	/*break-inside: avoid; /* pas de saut de colonne au sein des paragraphes */
+	/*word-wrap: break-word; /* césure des mots longs */
+	/*font-smoothing:subpixel-antialiased;*/
+	text-align: justify;
+	background-color: rgba(0,0,100,0.2);
+	border-width: 7px 7px 16px 7px;
+	border-image: 7 7 16 7 stretch; 
+	font-family: sprat,serif;
+
+
 }
 h1
 {
 	float: left;
 	margin: 5%;
 	padding: 2%;
-	font-family: "sprat";
+	font-family: sprat,serif;
 	border: solid;
 	border-color: maroon;
 	border-radius: 15px 0 10px 0;
+	box-shadow: 8px 8px 8px rgba(0,0,0,0.5) inset;
 }
 em
 {
 	font-weight: bold;
 	color: blue;
+}
+#img
+{
+	background: url("photo1.jpg") left top no-repeat;
+	background-size: 50% auto;
+
 }
