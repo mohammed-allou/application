@@ -1,6 +1,6 @@
 
-@font-face{
-	
+@font-face
+{
 	font-family: 'sprat';
 	src:url('Sprat_Variable.ttf'),
 		url('Sprat-CondensedBold.otf');
@@ -11,9 +11,10 @@
 }
 table
 {
-	border-collapse: collapse;
-	font-family: whitrabt,serif;
+	border-collapse: separate;
+	font-family: tahoma;
 	border: solid 2px black;
+	border-spacing: 2px;
 	width: auto;
 	margin: auto;
 	text-align: center;
@@ -26,16 +27,18 @@ td,tr,th
 
 caption
 {
-	box-shadow: 3px 3px 1px;
+	box-shadow: 3px 3px 1px 1px;
+	border-radius: 15px 10px 10px 10px;
 	font-weight: bold;
 	padding: 10px;
 	caption-side: bottom;
 	text-shadow: 2px 2px 4px #999;
+	background-color: silver;
 }
 
 
 p {
-	font-family: whitrabt,serif;
+	font-family: verdana;
 	margin-bottom: 20px;
 
 	margin-top: 30px; /* une marge haute sur le second paragraphe */
@@ -56,24 +59,25 @@ a[href$="pdf"]:after
 	text-align: justify;
 	background-color: rgba(0,0,100,0.2);
 	border-width: 7px 7px 16px 7px;
-	border-image: 7 7 16 7 stretch; 
-	font-family: sprat,serif;
-
-
-}
+	border-image: 7 7 16 7 stretch;
+	border-radius: 15px 0 10px 0; 
+	font-family: tahoma;
+	
+	}
 h1
 {
 	float: left;
 	margin: 5%;
 	padding: 2%;
-	font-family: sprat,serif;
+	font-family: verdana,serif;
 	border: solid;
 	border-color: maroon;
 	border-radius: 15px 0 10px 0;
 	box-shadow: 8px 8px 8px rgba(0,0,0,0.5) inset;
 }
 em
-{
+{	
+	font-family: verdana;
 	font-weight: bold;
 	color: blue;
 }
@@ -81,5 +85,20 @@ em
 {
 	background: url("photo1.jpg") left top no-repeat;
 	background-size: 50% auto;
+
+}
+th
+{
+	background-color: gray;
+}
+.partie
+{
+	border:solid black;
+	display: flex;
+	position: absolute;
+	left: 5%;
+	top: 183%;
+	margin-right: 10%;
+
 
 }
