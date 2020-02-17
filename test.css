@@ -95,6 +95,7 @@ th
 }
 .partie
 {
+
 	border:solid black;
 	position: absolute;
 	left: 3%;
@@ -127,4 +128,33 @@ img
 	position: relative;
 	bottom: 25px;
 	left: 95px;
+}
+.révélation
+{
+	position: absolute;
+	top: 310%;
+	text-align: justify;
+	font-family: tahoma;	
+	width: 80%;
+	padding:1%;
+	margin-left: 11%;
+	border : solid;
+	box-shadow: 5px 5px 5px rgba(1,1,1,0.4);
+	border-radius: 20px 0px 15px 0px;	
+}
+h3
+{
+	width: 23%;
+	padding: 2%;
+	font-family: verdana;
+	border:groove;
+	border-color: maroon;
+	border-radius: 15px 0 10px 0;
+	box-shadow: 8px 8px 8px rgba(0,0,0,0.5) inset;
+
+}
+img
+{
+	float: right;
+	margin-right: 9%;
 }
